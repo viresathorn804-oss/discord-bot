@@ -89,6 +89,16 @@ client.on('messageCreate', async message => {
   }
 });
 
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('✅ Bot is online!');
+});
+
+app.listen(3000, () => {
+  console.log('🌐 Web server is running on port 3000');
+});
 // =======================================================
 // 🔑 เข้าระบบ (Token)
 // =======================================================
